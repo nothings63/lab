@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Security Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Website Security Scanner</h2>
+    <form method="POST" action="/scan">
+        <div class="form-group">
+            <label for="url">Enter Website URL:</label>
+            <input type="text" id="url" name="url" class="form-control" placeholder="https://example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="scan_type">Select Scan Type:</label>
+            <select id="scan_type" name="scan_type" class="form-control">
+                <option value="vulnerability">Vulnerability Scan</option>
+                <option value="malware">Malware Detection</option>
+            </select>
+        </div>
+        <button type="submit" class="btn">Start Scan</button>
+    </form>
+</div>
+</body>
+</html>
